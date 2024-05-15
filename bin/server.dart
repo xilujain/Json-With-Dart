@@ -8,7 +8,7 @@ import 'models/model.dart';
 
 Future<Response> postId(Request request, String id) async {
   try {
-    File jsonFile = File('../posts.json');
+    File jsonFile = File('posts.json');
     final Map content = json.decode(await jsonFile.readAsString());
     List<Posts> posts = [];
     content['posts']
